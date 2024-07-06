@@ -1,20 +1,71 @@
 package com.TestArc;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main
-{
-    public static void main(String[] args)
-    {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.util.Objects;
 
-        for (int i = 1; i <= 5; i++)
+public class TestArc
+{
+   private final WebDriver driver;
+
+   /* Default Driver will be Chrome Driver */
+    public TestArc (WebDriver driver)
+    {
+        this.driver = Objects.requireNonNullElseGet(driver, ChromeDriver::new);
+    }
+
+    /* Call this method to Invoke the Browser Driver*/
+    public static TestArc InvokeDriver(WebDriver driver)
+    {
+        return new TestArc(driver);
+    }
+
+    /* Call this method to navigate to URL */
+    public void GoToURL(String url)
+    {
+        driver.get(url);
+    }
+
+    /* Find Element using this method */
+    public WebElement Locator(By by)
+    {
+        return driver.findElement(by);
+    }
+
+    /* Use this method to click on the Page */
+    public void click(By WebElem)
+    {
+        WebElement elem = Locator(WebElem);
+        elem.click();
+    }
+
+    /* Use this method to enter text in the TextBox*/
+    public void fill(By WebElem, String content)
+    {
+        WebElement elem = Locator(WebElem);
+        elem.clear();
+        elem.sendKeys(content);
+    }
+
+    /* Use this method to explicitly sleep */
+    public void sleep(int TimeInSeconds)
+    {
+        try
         {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+            Thread.sleep(TimeInSeconds * 1000L);
         }
+        catch (InterruptedException e)
+        {
+            System.out.println(e);
+        }
+    }
+
+    /* Use this method to Quit the Driver */
+    public void QuitBrowser()
+    {
+        driver.quit();
     }
 }
