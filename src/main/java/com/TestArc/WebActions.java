@@ -6,20 +6,20 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.Objects;
 
-public class TestFramework
+public class WebActions
 {
    private final WebDriver driver;
 
    /* Default Driver will be Chrome Driver */
-    public TestFramework(WebDriver driver)
+    public WebActions(WebDriver driver)
     {
         this.driver = Objects.requireNonNullElseGet(driver, ChromeDriver::new);
     }
 
     /* Call this method to Invoke the Browser Driver*/
-    public static TestFramework InvokeDriver(WebDriver driver)
+    public static WebActions InvokeDriver(WebDriver driver)
     {
-        return new TestFramework(driver);
+        return new WebActions(driver);
     }
 
     /* Call this method to navigate to URL */
