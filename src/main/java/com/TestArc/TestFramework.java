@@ -1,26 +1,25 @@
 package com.TestArc;
 
-import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.Objects;
 
-public class TestArc
+public class TestFramework
 {
    private final WebDriver driver;
 
    /* Default Driver will be Chrome Driver */
-    public TestArc (WebDriver driver)
+    public TestFramework(WebDriver driver)
     {
         this.driver = Objects.requireNonNullElseGet(driver, ChromeDriver::new);
     }
 
     /* Call this method to Invoke the Browser Driver*/
-    public static TestArc InvokeDriver(WebDriver driver)
+    public static TestFramework InvokeDriver(WebDriver driver)
     {
-        return new TestArc(driver);
+        return new TestFramework(driver);
     }
 
     /* Call this method to navigate to URL */
