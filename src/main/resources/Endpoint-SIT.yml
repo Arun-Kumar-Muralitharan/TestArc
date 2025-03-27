@@ -1,0 +1,11 @@
+UI_Endpoints:
+  Credit_Home: https://credit-stg.go-yubi.in
+  oms_base_url: https://credit-stg.go-yubi.in/order-management/orders
+
+API_Endpoints:
+  oms_api_url: https://oms-api-sit.go-yubi.in
+  keycloak_url: https://keycloak-sit.go-yubi.in
+  auth_url: https://auth-sit-api.go-yubi.in
+
+keycloak:
+  realm: yubi_sit

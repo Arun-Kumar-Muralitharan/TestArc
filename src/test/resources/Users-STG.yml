@@ -1,0 +1,28 @@
+Users:
+#  TEST_Customer:
+#    name: OMS Automation 1
+#    email: keycloak234@yopmail.com
+#    password: Think@123
+#    role: customer
+#    id: 6572a61d3044060040bafef6
+#
+#  TEST_Customer1:
+#    name: OMS Automation 2
+#    email: keycloak234@yopmail.com
+#    password: Think@123
+#    role: customer
+#    id: 6572a61d3044060040bafef6
+
+  KLMNOP:
+    name: KLMNOP
+    email: klmnop@yopmail.com
+    password: Think@123
+    role: customer
+    id: 6695276fa0e6a800576828b6
+
+  AKM Group Pvt Ltd:
+    name: AKM Group Pvt Ltd
+    email: arunstginvestoradmin@yopmail.com
+    password: Think@123
+    role: investor
+    id: 623c51b4e37176007e33995d
