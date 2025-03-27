@@ -1,0 +1,11 @@
+UI_Endpoints:
+  Credit_Home: https://credit-qa.go-yubi.in
+  oms_base_url: https://credit-qa.go-yubi.in/order-management/orders
+
+API_Endpoints:
+  oms_api_url: https://oms-api-qa.go-yubi.in
+  keycloak_url: https://keycloak-qa.go-yubi.in
+  auth_url: https://auth-qa-api.go-yubi.in
+
+keycloak:
+  realm: yubi_qa

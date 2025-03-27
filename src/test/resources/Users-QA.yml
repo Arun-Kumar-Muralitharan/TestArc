@@ -1,0 +1,14 @@
+Users:
+  TEST_Customer:
+    name: OMS Automation 1
+    email: keycloak234@yopmail.com
+    password: Think@123
+    role: customer
+    id: 6572a61d3044060040bafef6
+
+  KLMNOP:
+    name: KLMNOP
+    email: klmnop@yopmail.com
+    password: Think@123
+    role: customer
+    id: 646c60f980a8260063bdb4a4

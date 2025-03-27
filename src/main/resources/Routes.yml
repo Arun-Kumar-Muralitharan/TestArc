@@ -1,0 +1,10 @@
+API_Routes:
+  express_interest: /customer_interest_relations
+  create_order: /api/v1/private/kafkaEventConsumption
+  shortlist_cp_order: /api/v1/private/kafkaEventConsumption
+  delete_order: /api/v1/private/orders/
+  get_order_id: /api/v1/private/orders?order_name=
+  orders_route: /api/v2/orders/6682772a90c4d167432886ba?engagement_letter_status=c2lnbmVk
+
+UI_Routes:
+  My_Applications: "/my-applications"
